@@ -1,0 +1,16 @@
+.secondline {
+    display: block;
+    margin-left: 93px;
+    margin-top: 0;
+    padding-top: 12px;
+
+    &__title {
+        display: flex;
+        font-size: 14px;
+        line-height: 1.14;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: $white-color;
+        margin-bottom: 20px;
+    }
+}

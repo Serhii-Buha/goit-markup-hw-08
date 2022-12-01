@@ -1,0 +1,48 @@
+// flex-list
+.flex-list {
+    @extend %list;
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+
+    &__item {
+        width: 370px;
+        margin: 15px;
+
+        background: $white-color;
+        border: 1px solid #eeeeee;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 2;
+        letter-spacing: 0.06em;
+        color: $secondary-text-color;
+
+        margin-top: 20px;
+        margin-bottom: 0px;
+        padding-left: 24px;
+    }
+
+    &__text {
+        margin-top: 4px;
+        padding-bottom: 20px;
+        padding-left: 24px;
+    }
+}
+
+.flex-list__link {
+    display: block;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+    color: $primary-text-color;
+
+    &:hover,
+    &:focus {
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+            1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
+}
