@@ -1,0 +1,21 @@
+.adaptive-container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (min-width: 480px) {
+  .adaptive-container {
+    width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .adaptive-container {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .adaptive-container {
+    width: 1200px;
+  }
+}/*# sourceMappingURL=mobile-container.css.map */
