@@ -1,7 +1,20 @@
+
 .form-subscribe {
     &__label {
-        display: flex;
-        align-items: center;
+        // display: flex;
+        // align-items: center;
+
+        @media screen and (max-width: 767px) {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+        
+        @media screen and (min-width: 768px) {}
+        
+        @media screen and (min-width: 1200px) {
+            display: flex;
+        }
     }
 
     &__input {
@@ -22,6 +35,17 @@
 
         background-color: $primary-bg-color;
         color: rgba(255, 255, 255, 0.6);
+
+        @media screen and (max-width: 767px) {
+            width: 100%;
+            margin-right: 0;
+            margin-bottom: 20px;
+        }
+        @media screen and (min-width: 768px) and (max-width: 1199px) {
+            width: 450px;
+            margin: 0;
+            
+        }
     }
 
     &__button {
@@ -42,6 +66,15 @@
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
         border-radius: 4px;
         cursor: pointer;
+
+        @media screen and (min-width: 768px) and (max-width: 1199px) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+        }
     }
 
     &__icon {

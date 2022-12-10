@@ -1,11 +1,42 @@
+.firstline {
+    
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        // padding-left: 60px;
+
+        display: flex;
+        padding-left: 60px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    @media screen and (min-width: 1200px) {}
+}
+
 .firstline__link-logo {
+    // font-family: $secondary-font;
+    // font-weight: 700;
+    // font-size: 26px;
+    // line-height: 1.19;
+    // letter-spacing: 0.03em;
+    // text-decoration: none;
+    // color: $accent-color;
+
     font-family: $secondary-font;
     font-weight: 700;
-    font-size: 26px;
-    line-height: 1.19;
+    font-size: 24px;
+    line-height: 1.17;
     letter-spacing: 0.03em;
     text-decoration: none;
     color: $accent-color;
+
+    @media screen and (min-width: 480px) {}
+    
+    @media screen and (min-width: 768px) {}
+    
+    @media screen and (min-width: 1200px) {
+        font-size: 26px;
+        line-height: 1.19;
+    }
 }
 
 .firstline__span-logo {

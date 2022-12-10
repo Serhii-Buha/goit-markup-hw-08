@@ -3,6 +3,10 @@
     display: flex;
     justify-content: center;
     padding-bottom: 30px;
+
+    @media screen and (max-width: 1199px) {
+        padding-bottom: 24px;
+    }
 }
 
 .social-icons__item {

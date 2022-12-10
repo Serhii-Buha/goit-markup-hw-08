@@ -89,6 +89,13 @@
     border-radius: 4px;
     transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 
+    @media screen and (max-width: 1199px) {
+        font-size: 14px;
+        line-height: 1.14;
+    }
+    
+    @media screen and (min-width: 1200px) {}
+
     &:focus {
         border: 1px solid $accent-color;
         outline: none;
@@ -110,6 +117,10 @@
     letter-spacing: 0.03em;
 
     color: $primary-text-color;
+
+    @media screen and (max-width: 1199px) {
+            font-size: 12px;
+    }
 
     &__input {
         position: absolute;

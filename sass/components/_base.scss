@@ -13,7 +13,7 @@ p {
 
 img {
     display: block;
-    width: 100%;
+    max-width: 100%;
     height: auto;
 }
 
@@ -57,17 +57,3 @@ img {
     }
 }
 
-.menu-container {
-    // position: absolute;
-    // top: 100%;
-    // left: 0;
-    // width: 100%;
-
-    padding: 20px;
-    text-align: center;
-    font-size: 16px;
-
-    &.is-open {
-        display: block;
-    }
-}
