@@ -60,7 +60,7 @@ img {
   list-style: none;
 }
 
-.cards, .about {
+.about {
   padding-top: 0;
   padding-bottom: 94px;
 }
@@ -118,6 +118,12 @@ img {
   letter-spacing: 0.03em;
   text-decoration: none;
   color: #2196f3;
+}
+@media screen and (max-width: 767px) {
+  .header-flex__link-logo {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .header-flex__link-logo {
@@ -284,10 +290,10 @@ img {
   display: -ms-inline-flexbox;
   display: inline-flex;
   margin: 0;
-  padding: 0;
+  padding: 10px 0;
   border: none;
   background-color: transparent;
-  z-index: 1;
+  z-index: 2;
   cursor: pointer;
 }
 .menu-button:focus {
@@ -308,6 +314,9 @@ img {
   fill: #2196f3;
   cursor: pointer;
 }
+.menu-button.is-open:hover .icon-close_40px {
+  fill: #2196f3;
+}
 .menu-button.is-open .icon-menu_40px {
   display: none;
 }
@@ -321,6 +330,7 @@ img {
   padding: 48px 40px;
   background-color: #ffffff;
   display: none;
+  z-index: 1;
 }
 .menu-container.is-open {
   display: block;
@@ -1568,22 +1578,55 @@ img {
 }
 
 .main-portfolio {
-  padding-top: 94px;
+  padding-top: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .main-portfolio {
+    padding-top: 94px;
+  }
 }
 
 .buttons-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  text-align: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-bottom: 50px;
   cursor: pointer;
+}
+@media screen and (max-width: 767px) {
+  .buttons-list {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    row-gap: 15px;
+    margin-bottom: 40px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .buttons-list {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .buttons-list {
+    text-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 50px;
+  }
 }
 .buttons-list__item:not(:last-child) {
   margin-right: 8px;
+}
+@media screen and (min-width: 1200px) {
+  .buttons-list__item:not(:last-child) {
+    margin-right: 8px;
+  }
 }
 
 .buttons-list__button {
@@ -1608,19 +1651,58 @@ img {
           box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-.flex-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin: -15px;
+.cards {
+  padding-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .cards {
+    padding-top: 0;
+    padding-bottom: 94px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .flex-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: -15px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .flex-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: -15px;
+  }
 }
 .flex-list__item {
-  width: 370px;
-  margin: 15px;
   background: #ffffff;
   border: 1px solid #eeeeee;
+}
+@media screen and (min-width: 768px) {
+  .flex-list__item {
+    -ms-flex-preferred-size: calc((100% - 60px) / 2);
+        flex-basis: calc((100% - 60px) / 2);
+    margin: 15px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .flex-list__item {
+    -ms-flex-preferred-size: calc((100% - 90px) / 3);
+        flex-basis: calc((100% - 90px) / 3);
+    margin: 15px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .flex-list__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 .flex-list__title {
   font-weight: 700;
@@ -1631,11 +1713,13 @@ img {
   margin-top: 20px;
   margin-bottom: 0px;
   padding-left: 24px;
+  padding-right: 24px;
 }
 .flex-list__text {
   margin-top: 4px;
   padding-bottom: 20px;
   padding-left: 24px;
+  padding-right: 24px;
 }
 
 .flex-list__link {

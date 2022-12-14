@@ -1,16 +1,48 @@
 // flex-list
 .flex-list {
     @extend %list;
-    display: flex;
-    flex-wrap: wrap;
-    margin: -15px;
+    // display: flex;
+    // flex-wrap: wrap;
+    // margin: -15px;
+    
+
+    @media screen and (min-width: 480px) {}
+    
+    @media screen and (min-width: 768px) {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -15px;
+    }
+    
+    @media screen and (min-width: 1200px) {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -15px;
+    }
 
     &__item {
-        width: 370px;
-        margin: 15px;
+        
+        // width: 370px;
+        // margin: 15px;
 
         background: $white-color;
         border: 1px solid #eeeeee;
+
+        @media screen and (min-width: 768px) {
+            flex-basis: calc((100% - 60px) / 2);
+            margin: 15px;
+        }
+
+        @media screen and (min-width: 1200px) {
+            flex-basis: calc((100% - 90px) / 3);
+            margin: 15px;
+        }
+    }
+
+    &__item:not(:last-child) {
+        @media screen and (max-width: 767px) {
+            margin-bottom: 30px;
+            }
     }
 
     &__title {
@@ -23,12 +55,14 @@
         margin-top: 20px;
         margin-bottom: 0px;
         padding-left: 24px;
+        padding-right: 24px;
     }
 
     &__text {
         margin-top: 4px;
         padding-bottom: 20px;
         padding-left: 24px;
+        padding-right: 24px;
     }
 }
 
